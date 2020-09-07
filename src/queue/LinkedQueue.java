@@ -2,6 +2,13 @@ package queue;
 
 import java.util.Objects;
 
+/**
+ * This is a linked based queue. Adds, removes in O(n)
+ * 
+ * @author Shiva
+ *
+ * @param <T>
+ */
 public class LinkedQueue<T> {
 
 	private Node<T> front;

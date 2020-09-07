@@ -24,7 +24,7 @@ public class Challenge {
 
 	/**
 	 * This method checks if the string is palindrome or not? Ignores cases and
-	 * punctuation.
+	 * punctuation. Uses both stack and queue.
 	 * 
 	 * @param value
 	 * @author Shiva

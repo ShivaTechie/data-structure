@@ -60,6 +60,14 @@ public class ArrayQueue {
 			return back - front + queue.length;
 	}
 
+	/**
+	 * Removes the data from the very last of linked queue.
+	 * 
+	 * @author Shiva
+	 * @param data
+	 * @return size
+	 * @throws NoSuchElementException
+	 */
 	public int deQueue() {
 		if (size() <= 0)
 			throw new NoSuchElementException("Queue is Empty");
@@ -73,6 +81,11 @@ public class ArrayQueue {
 		return data;
 	}
 
+	/**
+	 * Prints the whole queue
+	 * 
+	 * @author Shiva
+	 */
 	public void printQueue() {
 		if (size() <= 0) {
 			System.out.println("Queue is Empty");
