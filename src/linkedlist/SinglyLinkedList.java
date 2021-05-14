@@ -3,7 +3,7 @@ package linkedlist;
 import java.util.Objects;
 
 /**
- * This doubly linked list is a generic type list.
+ * This Singly linked list is a generic type list.
  * 
  * @author Shiva
  * @param <T>
@@ -96,7 +96,7 @@ public class SinglyLinkedList<T> {
 	}
 
 	/**
-	 * Overload method to accept data as a object data
+	 * This method adds the data at front.
 	 * 
 	 * @author Shiva
 	 * @param data
@@ -120,7 +120,11 @@ public class SinglyLinkedList<T> {
 
 		Node<T> focusNode = head;
 		Node<T> focusNode2 = head;
-
+		if (node.getData() == head.getData()) {
+			head = head.getNext();
+			size--;
+			return head;
+		}
 		while (focusNode.getNext().getData() != node.getData()) {
 			focusNode = focusNode.getNext();
 			focusNode2 = focusNode2.getNext();
@@ -215,18 +219,16 @@ public class SinglyLinkedList<T> {
 		if (size() < pos)
 			throw new NullPointerException("Index is not present. Index is greater than the size of Linked List.");
 		Node<T> focusNode = head;
-		Node<T> focusNode2 = head;
+
 		if (pos == 0) {
 			node.setNext(head);
 			head = node;
 			return;
 		}
 		while (pos > 0) {
-
 			pos--;
 			if (pos != 0) {
 				focusNode = focusNode.getNext();
-				focusNode2 = focusNode2.getNext();
 			}
 		}
 		if (pos == 0) {
@@ -234,7 +236,14 @@ public class SinglyLinkedList<T> {
 				tail = node;
 			node.setNext(focusNode.getNext());
 			focusNode.setNext(node);
-
 		}
+	}
+
+	public void printFirstNode() {
+
+		if (Objects.isNull(head))
+			return;
+		System.out.println(head);
+
 	}
 }

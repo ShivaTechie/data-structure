@@ -10,8 +10,8 @@ public class LinkedMain {
 		linkedList.add(4);
 		linkedList.add(5);
 		linkedList.add(6);
-
-		linkedList.addAt(1, 3);
+		linkedList.addAt(6, 10);
+		
 		linkedList.printList();
 		linkedList.printLastNode();
 
